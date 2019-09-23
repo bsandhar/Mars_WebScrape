@@ -1,15 +1,14 @@
 # Import Dependencies
 from bs4 import BeautifulSoup as bs
 import pandas as pd
-import pymongo
 from splinter import Browser
-
+import pymongo
 
 
 
 def scrape():
-    executable_path = {'executable_path': 'chromedriver.exe'}
-    browser = Browser('chrome', **executable_path)
+    executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
+    browser = Browser('chrome', **executable_path, headless=False)
 
     # Create dictionary for scraped data
     mars_data = {}
